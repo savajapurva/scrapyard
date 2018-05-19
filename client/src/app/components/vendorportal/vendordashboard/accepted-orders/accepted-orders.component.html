@@ -1,0 +1,12 @@
+<div class="screen row container-fluid">
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8 dashboardblockaccept" >
+                <hr class="featurette-divider">
+
+                <ng2-smart-table class="ngtable" [settings]="settings" [source]="allacceptorder" (deleteConfirm)="onDeleteConfirm($event)" (editConfirm)="onSaveConfirm($event)" (createConfirm)="onCreateConfirm($event)"> </ng2-smart-table>
+
+                </div>
+
+         <div class="col-sm-2"></div>
+</div>

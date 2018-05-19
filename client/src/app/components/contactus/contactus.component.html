@@ -1,0 +1,73 @@
+<div class="screen row container-fluid">
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8 contactusblock" >
+                <div class="contactusreq">Contact Us</div>
+                <hr class="featurette-divider">
+                <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)">
+
+                    <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+
+                </agm-map>
+
+                <div class="block">
+                    <div class="femail" style="float:right;">savajapurva@gmail.com</div>
+                    <div class="mail">Mail Us:</div>
+
+              </div>
+
+              <div>
+                  <div class="num" style="float:right;">8735886163</div>
+                  <div class="reqcall">Give Us Call:</div>
+
+               </div>
+
+            <div class="callheading">Drop Us A Line</div>
+              <hr class="featurette-divider">
+              <!-- Demo Check -->
+              <!-- Custom Success/Error Message -->
+              <div class="row show-hide-message">
+                <div [ngClass]="messageClass">
+                  {{ message }}
+                </div>
+              </div>
+
+              <form [formGroup]="form" (submit)="onfillupSubmit()">
+
+                <div class="row container-fluid" >
+                <div class="col-sm-6" [ngClass]="{'has-error': (form.controls.fusername.errors && form.controls.fusername.dirty), 'has-success': !form.controls.fusername.errors}">
+                  <input type="text" class="form-control txt1" formControlName="fusername" name="fusername" placeholder="Name"/>
+                  <!-- Validation -->
+                  <ul class="help-block">
+                    <li *ngIf="form.controls.fusername.errors?.required && form.controls.fusername.dirty">This field is required</li>
+                    <li *ngIf="form.controls.fusername.errors?.minlength && form.controls.fusername.dirty || form.controls.fusername.errors?.maxlength && form.controls.fusername.dirty ">Minimum characters: 3, Maximum characters: 15</li>
+                    <li *ngIf="form.controls.fusername.errors?.validatefusername && form.controls.fusername.dirty">Username must not have any special characters</li>
+                    <li *ngIf="fusernameMessage">{{ fusernameMessage }}</li>
+                  </ul>
+                </div>
+                <div class="col-sm-6" [ngClass]="{'has-error': (form.controls.femail.errors && form.controls.femail.dirty), 'has-success': !form.controls.femail.errors}">
+                  <input type="femail" class="form-control txt2" formControlName="femail" name="femail" placeholder="Enter email"/>
+                  <!-- Validation -->
+                  <ul class="help-block">
+                    <li *ngIf="form.controls.femail.errors?.required && form.controls.femail.dirty">This field is required</li>
+                    <li *ngIf="(form.controls.femail.errors?.minlength && form.controls.femail.dirty || form.controls.femail.errors?.maxlength && form.controls.femail.dirty ) && form.controls.femail.dirty">Minimum characters: 5, Maximum characters: 30</li>
+                    <li *ngIf="form.controls.femail.errors?.validatefemail && form.controls.femail.dirty">This must be a valid e-mail</li>
+                    <li *ngIf="femailMessage">{{ femailMessage}}</li>
+                  </ul>
+                </div>
+
+                </div>
+
+                <div>
+                    <textarea class="textarea form-control" rows="7" type="ftext" name="ftext" formControlName="ftext" placeholder="Message" required></textarea>
+                </div>
+
+                <!-- Submit Input -->
+              <input  type="submit" class="btn btn-primary btn-color submit" value="Message Now" />
+
+              </form>
+        </div>
+
+         <div class="col-sm-2"></div>
+
+</div>

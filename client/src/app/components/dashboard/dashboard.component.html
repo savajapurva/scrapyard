@@ -1,0 +1,48 @@
+<div class="screen row container-fluid">
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8 dashboardblock" >
+                <div class="dashboardreq">My Request</div>
+                <hr class="featurette-divider">
+            <div *ngFor="let order of alluserorders" class="order">
+                <div class="row">
+                  <div class="col-md-4 attrib-container">
+                    <span class="title fa fa-shopping-cart">&nbsp; &nbsp;</span>
+                    <span class="value pickupTimeText">{{order.date}}</span>
+                    <span class="value pickupTime hidden">2017-06-25T04:30:19.706Z</span><!-- 20-Oct-2016 10:00 AM-->
+                  </div>
+                  <div class="col-md-4 attrib-container">
+                    <span class="title fa fa-user">&nbsp; &nbsp;</span>
+                    <span class="value name">{{order.username}}</span></div>
+                    <div class="col-md-4 requestId-container attrib-container pull-right">
+                      <span _ngcontent-c3="" class="fa fa-key">&nbsp; &nbsp;</span>
+                      <span class="value requestIdText">{{order._id}}</span>
+                    </div>
+                  </div>
+                  <hr class="featurette-divider">
+                <div class="row">
+                  <div class="col-md-4">
+                    <span class="title fa fa-phone">&nbsp; &nbsp;</span>
+                    <span class="value phone">{{order.mobile}}</span>
+                  </div><div class="col-md-4 pull-right">
+                    <span class="title fa fa-envelope">&nbsp; &nbsp;</span>
+                    <span class="value email">{{order.email}}</span>
+                  </div>
+                  <div class="col-md-4 attrib-container pull-right">
+                    <span class="title fa fa-location-arrow">&nbsp; &nbsp;</span>
+                    <span class="value place locality">{{order.cityzip}}</span>
+                  </div>
+                </div>
+                <hr class="featurette-divider">
+                <div class="row">
+                  <div class="col-md-12 attrib-container">
+                    <span class="title fa fa-building-o">&nbsp; &nbsp;</span>
+                    <span class="value address small">{{order.address}}</span>
+                  </div>
+                </div>
+
+              </div>
+        </div>
+
+         <div class="col-sm-2"></div>
+</div>

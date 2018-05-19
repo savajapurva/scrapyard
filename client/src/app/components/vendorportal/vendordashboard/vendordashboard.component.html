@@ -1,0 +1,14 @@
+<div class="screen row container-fluid">
+    <div class="col-sm-2">
+
+    </div>
+    <div class="col-sm-8 dashboardblockbutton">
+      <button type="button" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" routerLink="/vendordashboard/allorders" class="btn btn-primary btn-lg allorderbutton">All Orders Details</button>
+      <button type="button" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" routerLink="/vendordashboard/acceptedorder" class="btn btn-secondary btn-lg acceptorderbutton">Accepted Orders</button>
+    </div>
+    <div class="col-sm-2">
+
+    </div>
+
+</div>
+<router-outlet></router-outlet>

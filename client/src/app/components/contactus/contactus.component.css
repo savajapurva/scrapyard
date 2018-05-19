@@ -1,0 +1,66 @@
+.screen{
+  text-align: center;
+
+    background-color: #3DC970;
+}
+.contactusblock{
+  padding:20px;
+  margin-top: 20px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(255,255,255,0.37);
+  -moz-box-shadow: 0px 0px 8px 1px rgba(255,255,255,0.37);
+  box-shadow: 0px 0px 8px 1px rgba(255,255,255,0.37);
+  background-color: white;
+}
+.contactusreq{
+  font-size: 40px;
+  color: #5A5A5A;
+}
+
+.h5{
+  font-family: sans-serif;
+  font-size: 2px;
+
+}
+agm-map{
+  height: 300px;
+}
+.block{
+  padding-top:30px;
+}
+.femail{
+  margin-right:40%;
+}
+.mail{
+  margin-left:35%;
+  font-weight: bold;
+}
+.reqcall{
+  margin-left:32%;
+  font-weight: bold;
+}
+.num{
+  margin-right:48%;
+}
+
+.callheading{
+  margin-right:30px;
+
+  color: #5A5A5A;
+  padding-top:40px;
+  font-size:40px;
+}
+.textarea{
+  margin-left: 15px;
+  margin-top:20px;
+  width:97%;
+}
+.btn-color {
+  margin-top:20px;
+    background-color: #0F8723;
+    font-family: inherit;
+    font-weight: 700;
+    border-radius: 27px;
+    padding: 15px;
+    border: none;
+}

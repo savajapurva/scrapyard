@@ -1,0 +1,37 @@
+.screen{
+  text-align: center;
+
+    background-color: #3DC970;
+}
+
+.dashboardblockbutton{
+  padding-left:10px;
+  padding-right:10px;
+  margin-top: 20px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(255,255,255,0.37);
+  -moz-box-shadow: 0px 0px 8px 1px rgba(255,255,255,0.37);
+  box-shadow: 0px 0px 8px 1px rgba(255,255,255,0.37);
+  background-color: white;
+}
+
+.allorderbutton{
+        margin-left: 0;
+        padding:30px 100px 30px 100px;
+        background-color: #204D74;
+}
+.allorderbutton:hover{
+        background-color: #138496;
+}
+
+
+.acceptorderbutton{
+  color:white;
+  background-color: #01924B;
+  padding:30px 100px 30px 100px;
+}
+
+.acceptorderbutton:hover{
+  background-color: #138496;
+}

@@ -1,0 +1,33 @@
+<div class="ratetotalblock">
+<div class="float-right totalmoney">&#x20B9; {{total}}</div>
+<div class="closebutton fa fa-times ratecard-calc-cross" routerLink="/ratecard"></div>
+</div>
+<div class="screen row container-fluid">
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8 ratecardblock" >
+                <div class="ratecardreq">RateCard</div>
+
+                <hr class="featurette-divider">
+                <div class="wrapper">
+
+        <div class="container col-sm-3" *ngFor="let val of singledata">
+          <div class="front">
+            <div class="inner">
+              <input type="number" (input)="onSearchChange($event.target.value,val.price,val.name)" placeholder="Quantity" min="0" class="input_weights popupInputBox">
+              <p class="scrapname">{{val.name}}</p>
+              <!-- <p>{{val.picture}}</p> -->
+              <img src="http://localhost:8080/vendorauthentication/ratecardcalculator/{{val.picture}}" width="50px" height="50px"/>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p>₹{{val.price}}</p>
+            </div>
+          </div>
+        </div>
+
+
+
+         <div class="col-sm-2"></div>
+</div>

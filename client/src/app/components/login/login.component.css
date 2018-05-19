@@ -1,0 +1,26 @@
+.dashboardblock{
+  padding:40px;
+  margin-top:120px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(255,255,255,0.37);
+  -moz-box-shadow: 0px 0px 8px 1px rgba(255,255,255,0.37);
+  box-shadow: 0px 0px 8px 1px rgba(255,255,255,0.37);
+  background-color: white;
+}
+.dashboardreq{
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 40px;
+  color: #5A5A5A;
+}
+.submit{
+  margin-top:15px;
+}
+label{
+  font-size:15px;
+  color:#525252;
+}
+
+.forgot{
+  margin-top: 20px;
+}

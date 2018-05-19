@@ -1,0 +1,32 @@
+<div class="screen row container-fluid">
+        <div class="col-sm-3"></div>
+
+        <div class="col-sm-6 dashboardblock" >
+                <div class="dashboardreq">Rate Card Items:</div>
+                    <hr class="featurette-divider">
+
+                    <a routerLink="add" class="btn btn-default">Add Product</a>
+                    <table class="table products-table">
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Picture</th>
+                            <th class="delete-column"></th>
+                        </tr>
+                        <tr *ngFor="let product of products">
+                            <td><a [routerLink]="['edit', product.id]">{{product.name}}</a></td>
+                            <td>${{product.price}}</td>
+                            <td>{{product.picture}}</td>
+                            <td><a (click)="deleteProduct(product.id)" class="btn btn-xs btn-danger">Delete</a></td>
+                        </tr>
+                    </table>
+                    <div class="view-side-form">
+                        <router-outlet></router-outlet>
+                    </div>
+
+
+
+        </div>
+
+       <div class="col-sm-3"></div>
+</div>

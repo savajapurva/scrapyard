@@ -1,0 +1,26 @@
+<div class="row container-fluid">
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8 ratecardblock" >
+                <div class="ratecardreq">RateCard</div>
+                <button class="calculatorbutton" type="button" name="button" routerLink="/ratecardcalculator"><span class="fa fa-calculator">&nbsp;&nbsp;</span>Calculator</button>
+                <hr class="featurette-divider">
+        <div class="wrapper">
+        <div class="container col-sm-3" *ngFor="let val of singledata">
+          <div class="front">
+            <div class="inner">
+              <p>{{val.name}}</p>
+              <!-- <p>{{val.picture}}</p> -->
+              <img src="http://localhost:8080/vendorauthentication/ratecardcalculator/{{val.picture}}"/>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>₹{{val.price}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+         <div class="col-sm-2"></div>
+</div>

@@ -1,0 +1,31 @@
+﻿<div class="side-form">
+    <h1>{{title}}</h1>
+    <div class="form-container">
+        <form (ngSubmit)="saveProduct()">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" [(ngModel)]="product.name" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="name">Price</label>
+                <input type="number" name="price" [(ngModel)]="product.price" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="name">Picture</label>
+              <div class="input-group col-xs-12">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+                <input type="text" name="picture" [(ngModel)]="product.picture" class="form-control input-lg"  value="{{ PicturePath }}" disabled placeholder="Upload Image">
+                <span class="input-group-btn">
+                  <input type="file" class="file" id="uploadpicture" (change)="onFileChange($event)">
+                  <button (click)="openFileBrowser($event)" class="browse btn btn-primary input-lg form-control" type="button">
+                    <i class="glyphicon glyphicon-search"></i> Browse</button>
+                </span>
+              </div>
+            </div>
+            <div class="form-group">
+                <a class="btn btn-default" routerLink="/products">Cancel</a>
+                <button class="btn btn-primary">Save</button>
+            </div>
+        </form>
+    </div>
+</div>

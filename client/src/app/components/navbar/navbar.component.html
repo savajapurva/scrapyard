@@ -1,0 +1,37 @@
+<nav class="navbar navbar-default navigation" style="margin-bottom:0">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+    <a routerLink="/"><img class="logo pull-left" src="./assets/logo.png"></a>
+    <a class="logotext navbar-brand" routerLink="/">ScrapYard</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-left">
+        <li ><a routerLink="/">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+        <li *ngIf=this.authService.isLoggedIn ><div class="requestpickupblock"><a class="requestpickup" routerLink="/personal">Request PickUp</a></div></li>
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/contactus">Contact Us</a></li>
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/ratecard">RateCard</a></li>
+        <li  *ngIf="this.vendorauthService.isLoggedIn" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/products">Product</a></li>
+        <li *ngIf=this.authService.isLoggedIn  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/dashboard">Dashboard</a></li>
+        <li *ngIf="this.vendorauthService.isLoggedIn"   [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/vendordashboard/allorders">Vendor Dashboard</a></li>
+        <li *ngIf="this.authService.isLoggedIn" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/profile">Profile</a></li>
+        <li *ngIf="this.vendorauthService.isLoggedIn" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/vendorprofile">Profile</a></li>
+        <!-- <li *ngIf=this.authService.isLoggedIn><a  routerLink="/blog">Blog</a></li> -->
+        <li *ngIf="!this.authService.isLoggedIn && !this.vendorauthService.isLoggedIn" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/login">Login</a></li>
+        <li *ngIf="this.authService.isLoggedIn || this.vendorauthService.isLoggedIn"><a  href="#" (click)="onLogoutClick()">Logout</a></li>
+        <li *ngIf="!this.authService.isLoggedIn && !this.vendorauthService.isLoggedIn" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/register">Register</a></li>
+        <li *ngIf="!this.authService.isLoggedIn && !this.vendorauthService.isLoggedIn" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/vendorportal">Vendor Portal</a></li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
